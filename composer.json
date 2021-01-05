@@ -1,0 +1,45 @@
+{
+  "name": "startcode/clean-core",
+  "description": "clean-core php library",
+  "keywords": [
+    "clean core",
+    "use case",
+    "service",
+    "clean architecture"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Drasko Gomboc",
+      "email": "drasko.gomboc@gmail.com"
+    },
+    {
+      "name": "Zeljko Simic",
+      "email": "zeljkosbgd@gmail.com"
+    },
+    {
+      "name": "Petar Kapulica",
+      "email": "epkapuleti@gmail.com"
+    },
+    {
+      "name": "Nemanja Mirkov",
+      "email": "mirkovnemanja@gmail.com"
+    },
+    {
+      "name": "Vladan Zoricic",
+      "email": "vladan.zoricic@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Startcode\\ValueObject\\": "src/"
+    }
+  },
+  "require-dev": {
+    "php"            : ">=7.4",
+    "phpunit/phpunit": "3.7.*"
+  },
+  "require": {
+    "zendframework/zend-paginator": "2.*"
+  }
+}

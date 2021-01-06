@@ -30,4 +30,4 @@ unit-tests:
 .PHONY: all
 .PHONY: clean-composer-lock
 .PHONY: install update self-update
-.PHONY: test test-group
+.PHONY: unit-tests

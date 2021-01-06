@@ -13,22 +13,19 @@ install:
 	&& php composer.phar install \
 	&& /bin/echo -e "${TITLE} dependencies installed"
 
-self-update:
-	@ /bin/echo -e "${TITLE} running composer self update" \
-	&& php composer.phar self-update"
-
-test:
-	@/bin/echo -e "${TITLE} testing suite started..." \
-	&& vendor/phpunit/phpunit/composer/bin/phpunit -c test/phpunit.xml
-
-test-group:
-	@/bin/echo -e "${TITLE} testing suite started..." \
-	&& vendor/phpunit/phpunit/composer/bin/phpunit -c tests/phpunit.xml --group $(g) \
-
 update:
 	@/bin/echo -e "${TITLE} update dependencies..." \
 	&& php composer.phar update \
 	&& /bin/echo -e "${TITLE} dependencies updated"
+
+self-update:
+	@ /bin/echo -e "${TITLE} running composer self update" \
+	&& php composer.phar self-update"
+
+unit-tests:
+	@/bin/echo "${TITLE} running unit tests suite..." \
+	&& ./vendor/bin/phpunit -c test/phpunit.xml --do-not-cache-result --coverage-html tests/unit/coverage \
+	&& /bin/echo "${TITLE} unit tests completed"
 
 .PHONY: all
 .PHONY: clean-composer-lock

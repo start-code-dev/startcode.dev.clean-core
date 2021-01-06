@@ -2,8 +2,6 @@
 
 namespace Startcode\CleanCore\Constants;
 
-use Startcode\CleanCore\Constants\Time;
-
 class CacheLifetime
 {
     const LIFETIME_XXXXS = Time::MINUTE_01;

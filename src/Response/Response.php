@@ -29,7 +29,7 @@ class Response
         return $this->_applicationResponseCode;
     }
 
-    public function getFormattedResource(): ?array
+    public function getFormattedResource()
     {
         return $this->_formattedResource;
     }
@@ -47,7 +47,7 @@ class Response
         return Code::asMessage($this->getHttpResponseCode());
     }
 
-    public function getResponseMessage() : ?string
+    public function getResponseMessage()
     {
         return $this->_responseMessage;
     }
